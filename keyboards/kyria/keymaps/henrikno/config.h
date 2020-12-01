@@ -31,7 +31,7 @@
 // EC11K encoders have a different resolution than other EC11 encoders.
 // When using the default resolution of 4, if you notice your encoder skipping
 // every other tick, lower the resolution to 2.
-#define ENCODER_RESOLUTION 2
+#define ENCODER_RESOLUTION 1
 
 // The Leader key allows to flexibly assign macros to key sequences.
 #define LEADER_PER_KEY_TIMING
@@ -45,3 +45,20 @@
 
 // Allows media codes to properly register in macros and rotary encoder code
 #define TAP_CODE_DELAY 10
+
+
+// Set the mouse settings to a comfortable speed/accuracy trade-off
+// Assume the screen refresh rate is 60 Htz or higher
+// The default is 50. This makes the mouse ~3 times faster and more accurate
+#define MOUSEKEY_INTERVAL 16
+// The default is 20. Since we made the mouse about 3 times faster with the previous setting,
+// give it more time to accelerate to max speed to retain precise control over short distances.
+#define MOUSEKEY_TIME_TO_MAX 40
+// The default is 300. Let's try and make this as low as possible while keeping the cursor responsive
+#define MOUSEKEY_DELAY 100
+// It makes sense to use the same delay for the mouseweel
+#define MOUSEKEY_WHEEL_DELAY 100
+// The default is 100
+#define MOUSEKEY_WHEEL_INTERVAL 100
+// The default is 40
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 100
